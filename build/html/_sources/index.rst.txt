@@ -48,6 +48,7 @@ with `size = w * h`` being the  total number of tiles on board
 There are two board square attribute:
  * `TILE = 0` is the tile number
  * `ROT = 1` is the rotation or orientation of each tile, which takes the values:
+ 
    * `0` = no rotation
    * `1` = 90 degrees rotation anticlockwise
    * `2` = 180 degrees rotation
