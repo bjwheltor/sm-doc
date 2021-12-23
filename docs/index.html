@@ -38,11 +38,56 @@
 </div>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Shifting Maze is a game where the player attempts to navigate a finite,
-2D array of rooms, each having between 0 and 3 walls (or between 1 and
-4 doorways). As well as moving between the rooms through the doorways,
+<p>Shifting Maze is a graphical game where the player attempts to navigate a
+finite, 2D array of rooms, each having between 0 and 3 walls (or between 1
+and 4 doorways). As well as moving between the rooms through the doorways,
 the player can also rotate the current room they are in, opening up new
-possiblities for navigation through the ‘maze’.</p>
+possiblities for navigation through the ‘maze’. The configuration of the
+‘maze’ of rooms changes as rooms rotate and rows and columns slide randomly.</p>
+<p>To allow the number of rooms to be large, only a subset of the rooms are
+displayed, centred on the player, so as the player moves through the maze
+the rooms appear to move with the player remaining at the centre of the
+viewing window.</p>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<section id="board">
+<h3>Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h3>
+<p>This holds the current configuration of the rooms (called tiles)
+in the maze. All the relevant information is held in a single
+NumPy array called <cite>placements</cite>, set-up as follows:</p>
+<blockquote>
+<div><p><cite>placements : numpy.array(h, w, n)</cite></p>
+</div></blockquote>
+<dl class="simple">
+<dt>where:</dt><dd><ul class="simple">
+<li><p><cite>h`</cite> (height) is the y-dimension of board in tiles y direction (up and down)</p></li>
+<li><p><cite>w`</cite> (width) is the x-dimension of board in tiles in x direction (left and right)</p></li>
+<li><p><cite>n</cite> is the number of board square attributes</p></li>
+</ul>
+</dd>
+</dl>
+<p><cite>h</cite> and <cite>w</cite> are actually held as an <cite>Dimension</cite> object, <cite>dim</cite>,
+with <cite>size = w * h`</cite> being the  total number of tiles on board</p>
+<dl>
+<dt>There are two board square attribute:</dt><dd><ul class="simple">
+<li><p><cite>TILE = 0`</cite> is the tile number</p></li>
+<li><p><cite>ROT = 1`</cite> is the rotation or orientation of each tile,</p></li>
+</ul>
+<blockquote>
+<div><dl class="simple">
+<dt>which takes the values:</dt><dd><ul class="simple">
+<li><p><cite>0</cite> = no rotation</p></li>
+<li><p><cite>1</cite> = 90 degrees rotation anticlockwise</p></li>
+<li><p><cite>2</cite> = 180 degrees rotation</p></li>
+<li><p><cite>3</cite> = 90 degrees rotation clockwise</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+</section>
 </section>
 </section>
 <section id="indices-and-tables">
@@ -65,6 +110,10 @@ possiblities for navigation through the ‘maze’.</p>
   <ul>
 <li><a class="reference internal" href="#">Shifting Maze Documentation</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#board">Board</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
