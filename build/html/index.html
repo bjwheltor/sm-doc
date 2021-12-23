@@ -61,30 +61,23 @@ NumPy array called <cite>placements</cite>, set-up as follows:</p>
 </div></blockquote>
 <dl class="simple">
 <dt>where:</dt><dd><ul class="simple">
-<li><p><cite>h`</cite> (height) is the y-dimension of board in tiles y direction (up and down)</p></li>
-<li><p><cite>w`</cite> (width) is the x-dimension of board in tiles in x direction (left and right)</p></li>
+<li><p><cite>h</cite> (height) is the y-dimension of board in tiles y direction (up and down)</p></li>
+<li><p><cite>w</cite> (width) is the x-dimension of board in tiles in x direction (left and right)</p></li>
 <li><p><cite>n</cite> is the number of board square attributes</p></li>
 </ul>
 </dd>
 </dl>
 <p><cite>h</cite> and <cite>w</cite> are actually held as an <cite>Dimension</cite> object, <cite>dim</cite>,
 with <cite>size = w * h`</cite> being the  total number of tiles on board</p>
-<dl>
+<dl class="simple">
 <dt>There are two board square attribute:</dt><dd><ul class="simple">
-<li><p><cite>TILE = 0`</cite> is the tile number</p></li>
-<li><p><cite>ROT = 1`</cite> is the rotation or orientation of each tile,</p></li>
+<li><p><cite>TILE = 0</cite> is the tile number</p></li>
+<li><p><cite>ROT = 1</cite> is the rotation or orientation of each tile, which takes the values:
+* <cite>0</cite> = no rotation
+* <cite>1</cite> = 90 degrees rotation anticlockwise
+* <cite>2</cite> = 180 degrees rotation
+* <cite>3</cite> = 90 degrees rotation clockwise</p></li>
 </ul>
-<blockquote>
-<div><dl class="simple">
-<dt>which takes the values:</dt><dd><ul class="simple">
-<li><p><cite>0</cite> = no rotation</p></li>
-<li><p><cite>1</cite> = 90 degrees rotation anticlockwise</p></li>
-<li><p><cite>2</cite> = 180 degrees rotation</p></li>
-<li><p><cite>3</cite> = 90 degrees rotation clockwise</p></li>
-</ul>
-</dd>
-</dl>
-</div></blockquote>
 </dd>
 </dl>
 </section>
