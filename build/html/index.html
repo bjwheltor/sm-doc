@@ -55,29 +55,29 @@ viewing window.</p>
 <h3>Board<a class="headerlink" href="#board" title="Permalink to this headline">¶</a></h3>
 <p>This holds the current configuration of the rooms (called tiles)
 in the maze. All the relevant information is held in a single
-NumPy array called <cite>placements</cite>, set-up as follows:</p>
+NumPy array called <code class="docutils literal notranslate"><span class="pre">placements</span></code>, set-up as follows:</p>
 <blockquote>
 <div><p><cite>placements : numpy.array(h, w, n)</cite></p>
 </div></blockquote>
 <dl class="simple">
 <dt>where:</dt><dd><ul class="simple">
-<li><p><cite>h</cite> (height) is the y-dimension of board in tiles y direction (up and down)</p></li>
-<li><p><cite>w</cite> (width) is the x-dimension of board in tiles in x direction (left and right)</p></li>
-<li><p><cite>n</cite> is the number of board square attributes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> (height) is the y-dimension of board in tiles y direction (up and down)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code> (width) is the x-dimension of board in tiles in x direction (left and right)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of board square attributes</p></li>
 </ul>
 </dd>
 </dl>
-<p><cite>h</cite> and <cite>w</cite> are actually held as an <cite>Dimension</cite> object, <cite>dim</cite>,
-with <cite>size = w * h`</cite> being the  total number of tiles on board</p>
+<p><cite>h</cite> and <cite>w</cite> are actually held as an <code class="docutils literal notranslate"><span class="pre">Dimension</span></code> object, <code class="docutils literal notranslate"><span class="pre">dim</span></code>,
+with <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">=</span> <span class="pre">w</span> <span class="pre">*</span> <span class="pre">h</span></code> being the  total number of tiles on board</p>
 <dl class="simple">
 <dt>There are two board square attribute:</dt><dd><ul class="simple">
-<li><p><cite>TILE = 0</cite> is the tile number</p></li>
-<li><p><cite>ROT = 1</cite> is the rotation or orientation of each tile, which takes the values:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">TILE</span> <span class="pre">=</span> <span class="pre">0</span></code> is the tile number</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ROT</span> <span class="pre">=</span> <span class="pre">1</span></code> is the rotation or orientation of each tile, which takes the values:</p>
 <ul>
-<li><p><cite>0</cite> = no rotation</p></li>
-<li><p><cite>1</cite> = 90 degrees rotation anticlockwise</p></li>
-<li><p><cite>2</cite> = 180 degrees rotation</p></li>
-<li><p><cite>3</cite> = 90 degrees rotation clockwise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> = no rotation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = 90 degrees rotation anticlockwise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = 180 degrees rotation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> = 90 degrees rotation clockwise</p></li>
 </ul>
 </li>
 </ul>
